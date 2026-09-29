@@ -144,6 +144,16 @@ img {
   text-align: center;
 }
 
+.contact-page .contact-hero-image {
+  display: block;
+  width: 100%;
+  max-width: 640px;
+  height: 240px;
+  object-fit: cover;
+  margin: 0 auto 18px;
+  border-radius: 8px;
+}
+
 .about-page .banner h1,
 .contact-page .banner h1 {
   color: rgb(97, 64, 128);
