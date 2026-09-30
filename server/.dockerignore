@@ -1,0 +1,24 @@
+# Local virtualenv - the image installs its own deps from requirements.txt
+djangoenv/
+venv/
+env/
+
+# Node dependencies - only the built frontend is needed in the image
+**/node_modules/
+
+# Git / editor / OS noise
+.git/
+.gitignore
+.vscode/
+.idea/
+*.md
+Thumbs.db
+.DS_Store
+
+# Local logs and pid files
+*.log
+*.pid
+*.err.log
+
+# NOTE: frontend/build/ is deliberately NOT ignored - `npm run build` output
+# must land in the image.

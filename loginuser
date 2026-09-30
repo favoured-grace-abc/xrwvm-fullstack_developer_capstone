@@ -1,0 +1,5 @@
+Command (PowerShell):
+'{"userName":"loginuser","password":"DjangoLoginDemo!2026"}' | curl.exe --request POST --header 'Content-Type: application/json' --data-binary '@-' http://127.0.0.1:8001/djangoapp/login
+
+Output:
+{"userName": "loginuser", "status": "Authenticated"}

@@ -1,0 +1,21 @@
+Dealerships located in Kansas
+
+GET cURL command:
+curl.exe -sS --request GET "http://localhost:3030/fetchDealers/Kansas"
+
+Output (live Express/MongoDB API response):
+[
+    {
+        "_id": "6abcc07d1e9331566638f020",
+        "id": 8,
+        "city": "Topeka",
+        "state": "Kansas",
+        "address": "288 Larry Place",
+        "zip": "66642",
+        "lat": "39.0429",
+        "long": "-95.7697",
+        "short_name": "Bytecard",
+        "full_name": "Bytecard Car Dealership",
+        "__v": 0
+    }
+]

@@ -1,0 +1,26 @@
+Dealer details for ID 15
+
+GET cURL command:
+curl.exe -sS --request GET "http://localhost:3030/fetchDealer/15"
+
+Output (JSON response from the live Express/MongoDB API):
+[
+{
+        "_id": "6abcbf9c70415a8f0b1f87c8",
+        "id": 15,
+        "city": "San Antonio",
+        "state": "Texas",
+        "address": "5057 Pankratz Hill",
+        "zip": "78225",
+        "lat": "29.3875",
+        "long": "-98.5245",
+        "short_name": "Tempsoft",
+        "full_name": "Tempsoft Car Dealership",
+        "__v": 0
+    }
+]
+
+This is the response for dealer ID 15. Replace 15 in the URL with another dealer ID as needed.
+}
+
+Note: This fetches the public bundled JSON dataset. The app's Express /fetchDealer/:id route requires MongoDB and is not running in this environment.

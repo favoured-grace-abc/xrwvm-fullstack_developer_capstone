@@ -283,6 +283,52 @@ img {
   border-bottom: none;
 }
 
+/* ---------- Dealer details / reviews page ---------- */
+
+.dealer-page .title {
+  display: inline-block;
+  text-align: left;
+  margin: 0 0 10px 0;
+}
+
+.dealer-page .reviews_panel {
+  border: 1px solid #e2e2e2;
+  border-top: 5px solid rgb(97, 64, 128);
+  border-radius: 12px;
+  padding: 10px 20px 20px 20px;
+  margin-top: 20px;
+  background-color: #fbfbfd;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.dealer-page .reviews_panel .title {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.dealer-page .review_panel {
+  border-bottom: 1px dashed #d7d7dd;
+  padding: 12px 4px;
+}
+
+.dealer-page .review_panel:last-child {
+  border-bottom: none;
+}
+
+.dealer-page .review {
+  color: #3f3f46;
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+.dealer-page .reviewer {
+  color: rgb(97, 64, 128);
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 6px;
+}
+
 /* ---------- Responsive ---------- */
 
 @media (max-width: 860px) {

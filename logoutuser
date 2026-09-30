@@ -1,0 +1,13 @@
+PowerShell cURL commands and output:
+
+$cookieJar = Join-Path $env:TEMP 'django_logout_session.txt'
+
+Login command (creates the session cookie):
+'{"userName":"loginuser","password":"DjangoLoginDemo!2026"}' | curl.exe -sS --request POST --header 'Content-Type: application/json' --cookie-jar $cookieJar --data-binary '@-' http://127.0.0.1:8005/djangoapp/login
+Output:
+{"userName": "loginuser", "status": "Authenticated"}
+
+Logout GET command:
+curl.exe -sS --request GET --cookie $cookieJar --cookie-jar $cookieJar http://127.0.0.1:8005/djangoapp/logout
+Output:
+{"userName": ""}

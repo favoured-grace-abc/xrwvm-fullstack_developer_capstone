@@ -1,0 +1,85 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ dealer.full_name }} | Best Cars</title>
+    <link rel="stylesheet" href="/static/style.css" />
+    <link rel="stylesheet" href="/static/bootstrap.min.css" />
+  </head>
+  <body class="dealer-page">
+    <nav
+      class="navbar navbar-expand-lg navbar-light"
+      style="background-color: darkturquoise; height: 1in"
+    >
+      <div class="container-fluid">
+        <h2 style="padding-right: 5%">Dealerships</h2>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" style="font-size: larger" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="font-size: larger" href="/dealers"
+              >All Dealerships</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="font-size: larger" href="/about/"
+              >About Us</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="font-size: larger" href="/contact/"
+              >Contact Us</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div style="display: flex; flex-direction: column; margin: 20px">
+      <div class="dealer_header">
+        <h1 class="title">{{ dealer.full_name }}</h1>
+        <h4 class="details">
+          {{ dealer.city }}, {{ dealer.address }}, Zip - {{ dealer.zip }},
+          {{ dealer.state }}
+        </h4>
+        <table class="hours">
+          <tr>
+            <td>Dealer ID</td>
+            <td>{{ dealer.id }}</td>
+          </tr>
+          <tr>
+            <td>Latitude</td>
+            <td>{{ dealer.lat }}</td>
+          </tr>
+          <tr>
+            <td>Longitude</td>
+            <td>{{ dealer.long }}</td>
+          </tr>
+          <tr>
+            <td>Reviews</td>
+            <td>{{ reviews|length }}</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="reviews_panel">
+        <h2 class="title">Reviews</h2>
+        {% if reviews %} {% for review in reviews %}
+        <div class="review_panel">
+          <div class="review">{{ review.review }}</div>
+          <div class="reviewer">
+            {{ review.name }} &middot; {{ review.car_make }}
+            {{ review.car_model }} {{ review.car_year }} &middot; Purchase
+            date {{ review.purchase_date }}
+          </div>
+        </div>
+        {% endfor %} {% else %}
+        <div class="review_panel">
+          <div class="review">No reviews yet!</div>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </body>
+</html>
