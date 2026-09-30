@@ -1,0 +1,3 @@
+[flake8]
+per-file-ignores =
+    server/djangoproj/settings.py: E501,W391
